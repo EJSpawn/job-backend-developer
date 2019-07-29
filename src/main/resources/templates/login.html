@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Intelipost</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="login.css"></link>
+    </head>
+    <body class="text-center">
+        <div class="login-container">
+	        <div th:if="${param.error}" class="alert alert-danger">
+	            Dados inválidos.
+	        </div>
+	        <div th:if="${param.logout}" class="alert alert-danger">
+	            Você deslogado com sucesso.
+	        </div>
+	        
+	        <form class="form-signin" th:action="@{/login}" method="post">
+		      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+		      <h1 class="h3 mb-3 font-weight-normal">Intelipost</h1>
+		      <label for="inputEmail" class="sr-only">Login</label>
+		      <input type="text" id="login" name="username" class="form-control" placeholder="Login" required="" autofocus="">
+		      <label for="inputPassword" class="sr-only">Senha</label>
+		      <input type="password" id="senha" name="password" class="form-control" placeholder="Senha" required="">	      
+		      <button class="btn btn-lg btn-primary btn-block" type="submit">Logar</button>
+		      <p class="mt-5 mb-3 text-muted">©2019</p>
+		    </form>
+		</div>
+    </body>
+</html>
