@@ -1,0 +1,16 @@
+html, body, .container-fluid, .row, .nav{
+    height: 100%;
+}
+
+nav input[type='submit'] {
+	height: 40px;
+    width: 50px;
+    color: white;
+    background: cadetblue;
+    border: none;
+}
+
+nav input[type='submit']:hover {
+    background: #52ccd0;
+    cursor: pointer;
+}
