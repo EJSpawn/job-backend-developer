@@ -18,6 +18,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 		//Definição de autenticação
         http
+        	.csrf()
+        	.disable()// <- Desabilita proteção para CSRF para fins de teste
             .authorizeRequests()
                 .antMatchers("/", "/home").authenticated()
                 .and()
@@ -28,9 +30,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .logout()
                 .permitAll();
     }
-
-    @Bean
+    
+	@Bean
     @Override
+    @SuppressWarnings("deprecation")
     public UserDetailsService userDetailsService() {
     	//Usuários criados para simulação
         UserDetails user =
