@@ -16,6 +16,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
+		//Definição de autenticação
         http
             .authorizeRequests()
                 .antMatchers("/", "/home").authenticated()
@@ -31,6 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     @Override
     public UserDetailsService userDetailsService() {
+    	//Usuários criados para simulação
         UserDetails user =
              User.withDefaultPasswordEncoder()
                 .username("user")
