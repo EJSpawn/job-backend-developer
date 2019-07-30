@@ -37,7 +37,7 @@ public class NewsResourceTest {
 	}
 	
 	@Test
-	public void getNewsList() throws Exception {
+	public void getAll() throws Exception {
 		mockMvc.perform(MockMvcRequestBuilders
 				.get(JobBackendDeveloperConstants.RESOURCE_INTELIPOST_V1_NEWS)
 				.accept(MediaType.ALL))
