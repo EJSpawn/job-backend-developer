@@ -42,6 +42,11 @@ body {
     border-radius: 15px;
 }
 
+.login-container img{
+	width: 100%;
+    border: solid 1px white;
+}
+
 .form-control{
 	margin-bottom: 20px;
 }

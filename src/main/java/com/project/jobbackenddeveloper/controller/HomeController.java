@@ -1,6 +1,7 @@
 package com.project.jobbackenddeveloper.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +20,9 @@ public class HomeController {
 		this.newsService = newsService;
 	}
 	
-	@GetMapping()
+	@GetMapping(produces = MediaType.TEXT_HTML_VALUE)
 	public String index(Model model) {	
 		model.addAttribute("newsList", newsService.findAll());
-		return "/home.html";
+		return "home.html";
 	}
 }
