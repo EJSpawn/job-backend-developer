@@ -13,7 +13,7 @@ Nome: Elvis Justino da Silva
 * Spring Security
 * H2 (In Memory Database)
 * Boostrap 
-* Themeleaf
+* Thymeleaf
 
 ## Instrução de Build e Deploy
 Baixar e extrair [JDK 8+](https://openjdk.java.net/) e [Maven](https://maven.apache.org/download.cgi).
